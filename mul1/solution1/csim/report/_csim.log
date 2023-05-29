@@ -1,0 +1,22 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../Downloads/multiplier.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ramesh' on host 'ramesh-TUF-Gaming-FX705DD-FX705DD' (Linux_x86_64 version 5.15.0-43-generic) on Thu Mar 16 07:29:26 IST 2023
+INFO: [HLS 200-10] On os Ubuntu 22.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/ramesh/mul1/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramesh/71801678931966147478
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+2X2=4
+4X4=16
+6X6=36
+8X8=64
+10X10=100
+12X12=144
+14X14=196
+16X16=256
+18X18=324
+20X20=400
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

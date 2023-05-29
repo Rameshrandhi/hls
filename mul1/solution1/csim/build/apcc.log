@@ -1,0 +1,12 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ramesh' on host 'ramesh-TUF-Gaming-FX705DD-FX705DD' (Linux_x86_64 version 5.15.0-43-generic) on Thu Mar 16 10:36:01 IST 2023
+INFO: [HLS 200-10] On os Ubuntu 22.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/ramesh/mul1/solution1/csim/build'
+../../../../Downloads/multiplier_tb.c:2:10: fatal error: 'header.h' file not found
+#include "header.h"
+         ^
+1 error generated.
+ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
+ERROR: [APCC 202-1] ProcessSources failed
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramesh/48311678943161262553
+ERROR: [APCC 202-1] APCC failed.
