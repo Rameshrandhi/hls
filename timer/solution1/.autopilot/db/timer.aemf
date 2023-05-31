@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1685467780502">
+  <ports id="1" name="n" type="PortType" originalName="n.V" coreId="2786087904" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="start_r" type="PortType" originalName="start" coreId="1212371803" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="end_r" type="PortType" originalName="end" coreId="2796511616" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="35" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="38" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="39" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="40" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="41" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="42" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="45" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="46" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="47" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="48" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="51" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="54" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="57" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="58" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="59" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="60" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="61" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="62" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="64" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="65" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="67" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="68" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="69" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="72" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@ports.2"/>
+  <edges id="73" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="167" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="168" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.14"/>
+  <blocks id="32" name="timer" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="start_r_read" lineNumber="7" originalName="start" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." coreId="1667592275" contextFuncName="timer" bitwidth="1" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="7" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataInputObjs>start_r</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="n_read" lineNumber="7" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." coreId="3" contextFuncName="timer" bitwidth="16" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="7" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataInputObjs>n</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="state_load" lineNumber="22" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." coreId="2924582145" contextFuncName="timer" bitwidth="1" opcode="load" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="22" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="timer_variable_load" lineNumber="37" originalName="i_op" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." coreId="4294967292" contextFuncName="timer" bitwidth="64" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="37" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="zext_ln1496" lineNumber="1496" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln1496_fu_69_p1" coreId="1869098784" contextFuncName="operator_sub_16_false_32_true" bitwidth="17" opcode="zext" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="1496" fileDirectory="/home/ramesh" functionName="operator-&amp;lt;16, false, 32, true&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="ret_V" lineNumber="1496" originalName="ret.V" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="ret_V_fu_73_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_sub_16_false_32_true" bitwidth="17" opcode="add" m_display="0" m_delay="2.07" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="1496" fileDirectory="/home/ramesh" functionName="operator-&amp;lt;16, false, 32, true&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="sext_ln1019" lineNumber="1019" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sext_ln1019_fu_79_p1" coreId="1869098784" contextFuncName="operator_eq_33_true" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="1019" fileDirectory="/home/ramesh" functionName="operator==&amp;lt;33, true&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="end_local" lineNumber="1019" originalName="end_local" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="end_local_fu_83_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq_33_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.77" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="1019" fileDirectory="/home/ramesh" functionName="operator==&amp;lt;33, true&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="next_timer_variable" lineNumber="42" originalName="next_timer_variable" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." rtlName="next_timer_variable_fu_89_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="timer" bitwidth="64" opcode="add" m_display="0" m_delay="3.52" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="42" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="next_state" lineNumber="37" originalName="next_state" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." rtlName="next_state_fu_95_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="timer" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="10" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="37" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="next_timer_variable_1" lineNumber="37" originalName="next_timer_variable" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." rtlName="next_timer_variable_1_fu_101_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="timer" bitwidth="64" opcode="select" m_display="0" m_topoIndex="11" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="37" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="next_state_1" lineNumber="22" originalName="next_state" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." rtlName="next_state_1_fu_109_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="timer" bitwidth="1" opcode="select" m_display="0" m_delay="0.99" m_topoIndex="12" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="22" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="next_timer_variable_2" lineNumber="22" originalName="next_timer_variable" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." rtlName="next_timer_variable_2_fu_117_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="timer" bitwidth="64" opcode="select" m_display="0" m_delay="1.48" m_topoIndex="13" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="22" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="end_local_1" lineNumber="22" originalName="end_local" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." rtlName="end_r" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="timer" bitwidth="1" opcode="and" m_display="0" m_delay="0.97" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="22" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="state_write_ln51" lineNumber="51" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." coreId="2796545296" contextFuncName="timer" opcode="store" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="51" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataInputObjs>select</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="timer_variable_write_ln52" lineNumber="52" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." coreId="0" contextFuncName="timer" opcode="store" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="52" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataInputObjs>select</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="end_r_write_ln53" lineNumber="53" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." coreId="0" contextFuncName="timer" opcode="write" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="53" fileDirectory="/home/ramesh" functionName="timer"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>end_r</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="_ln56" lineNumber="56" fileName="Downloads/timer/timer-vitishls-files/timer.cpp" fileDirectory=".." coreId="176" contextFuncName="timer" opcode="ret" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="Downloads/timer/timer-vitishls-files/timer.cpp" linenumber="56" fileDirectory="/home/ramesh" functionName="timer"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>1496</validLinenumbers>
+      <validLinenumbers>1019</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="Downloads/timer/timer-vitishls-files/timer.cpp">
+      <validLinenumbers>7</validLinenumbers>
+      <validLinenumbers>22</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+      <validLinenumbers>42</validLinenumbers>
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>52</validLinenumbers>
+      <validLinenumbers>53</validLinenumbers>
+      <validLinenumbers>56</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="end_local_fu_83">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_timer_variable_2_fu_117">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1019_fu_79">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1496_fu_69">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="end_local_1_fu_125">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_timer_variable_1_fu_101">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_timer_variable_fu_89">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_state_fu_95">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_fu_73">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_state_1_fu_109">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln52_store_fu_138">
+    <nodeIds>29</nodeIds>
+  </ioNodes>
+  <ioNodes realName="n_read_read_fu_48">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln51_store_fu_132">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln53_write_fu_54">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <ioNodes realName="state_load_load_fu_61">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="start_r_read_read_fu_42">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="timer_variable_load_load_fu_65">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioPorts name="end_r">
+    <contents name="write">
+      <nodeIds>30</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="n">
+    <contents name="read">
+      <nodeIds>15</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="start_r">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="timer" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>32</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

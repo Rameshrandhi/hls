@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/ramesh/timer/solution1/./sim/autowrap/testbench/timer.cpp_pre.cpp.tb.cpp

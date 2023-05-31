@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="timer.h" path="/home/ramesh/Downloads/timer/timer-vitishls-files/timer.h"/>
+    <originFiles name="timer.cpp" path="/home/ramesh/Downloads/timer/timer-vitishls-files/timer.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="timer-tb.h" path="/home/ramesh/Downloads/timer/timer-vitishls-files/timer-tb.h"/>
+    <originFiles name="timer-tb.cpp" path="/home/ramesh/Downloads/timer/timer-vitishls-files/timer-tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

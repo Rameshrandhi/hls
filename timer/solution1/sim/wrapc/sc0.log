@@ -1,0 +1,6 @@
+   Build using "/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_timer.cpp
+   Compiling timer.cpp_pre.cpp.tb.cpp
+   Compiling timer-tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_timer_ir.ll
+   Generating cosim.tv.exe
