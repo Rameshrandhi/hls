@@ -22,4 +22,4 @@ Assignment-7: Designing of basic FIR filter
 
 Assignment-8: Designing of Cyclic Prefix removal in 5G NR.
 
-Assignment-9: Zadoff-chu Sequence generator.
+Assignment-9: Design  and verification of packet shifter
